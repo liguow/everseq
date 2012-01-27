@@ -1,0 +1,6 @@
+# Additional files to distribute with the package
+
+include distribute_setup.py scripts/*.py  LICENSE
+#include distribute_setup.py test/*
+recursive-include src *.h
+recursive-include lib *.h
