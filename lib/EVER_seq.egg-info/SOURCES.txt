@@ -140,10 +140,15 @@ lib/qcmodule/PSL.py
 lib/qcmodule/SAM.py
 lib/qcmodule/__init__.py
 lib/qcmodule/changePoint.py
+<<<<<<< HEAD
 lib/qcmodule/cigar.py
 lib/qcmodule/fasta.py
 lib/qcmodule/fastq.py
 lib/qcmodule/fickett.py
+=======
+lib/qcmodule/fasta.py
+lib/qcmodule/fastq.py
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 lib/qcmodule/mystat.py
 lib/qcmodule/wiggle.py
 scripts/RPKM_saturation.py
@@ -152,6 +157,7 @@ scripts/SAM_NVC.py
 scripts/SAM_reproducibility.py
 scripts/SAM_stat.py
 scripts/check_quality.py
+<<<<<<< HEAD
 scripts/clipping_profile.py
 scripts/gFragSizeDistrib.py
 scripts/geneBody_coverage.py
@@ -159,6 +165,12 @@ scripts/infer_experiment.py
 scripts/junction_annotation.py
 scripts/junction_saturation.py
 scripts/mappability_profile.py
+=======
+scripts/gFragSizeDistrib.py
+scripts/geneBody_coverage.py
+scripts/junction_annotation.py
+scripts/junction_saturation.py
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 scripts/read_distribution.py
 scripts/read_duplication.py
 scripts/strand_specificity.py

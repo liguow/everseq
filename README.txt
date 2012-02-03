@@ -53,7 +53,11 @@ the command line, EVER-seq package will be installed using Python's
 sys.prefix value.
 
 On Linux, using bash, I include the new value in my PYTHONPATH by
+<<<<<<< HEAD
 adding this line to my ~/.bashrc :
+=======
+adding this line to my ~/.bashrc:
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 
 $ export PYTHONPATH=/home/liguow/lib/python2.7/site-packages:$PYTHONPATH
 

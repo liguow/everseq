@@ -31,7 +31,11 @@ __author__ = "Liguo Wang"
 __copyright__ = "Copyright 2010, Wei Li's Lab"
 __credits__ = []
 __license__ = "GPL"
+<<<<<<< HEAD
 __version__="1.0.6"
+=======
+__version__="1.0.5"
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 __maintainer__ = "Liguo Wang"
 __email__ = "liguow@bcm.edu"
 __status__ = "Development" #Prototype or Production

@@ -1,8 +1,14 @@
 Metadata-Version: 1.0
 Name: EVER-seq
+<<<<<<< HEAD
 Version: 1.0.6
 Summary: Evaluation and Visualization Experiment of RNA-seq
 Home-page: http://code.google.com/p/ever-seq/
+=======
+Version: 1.0.5
+Summary: Evaluation and Visualization Experiment of RNA-seq
+Home-page: NA
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 Author: Liguo Wang
 Author-email: wangliguo78@gmail.com
 License: UNKNOWN

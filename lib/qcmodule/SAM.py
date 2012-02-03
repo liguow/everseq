@@ -22,7 +22,10 @@ from bx_extras.fpconst import isNaN
 from bx.bitset_utils import *
 from qcmodule import mystat
 from qcmodule import fasta
+<<<<<<< HEAD
 from qcmodule import cigar
+=======
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 #changes to the paths
 
 #changing history to this module
@@ -334,6 +337,7 @@ class ParseSAM:
 		Pwig=collections.defaultdict(dict)
 		Nwig=collections.defaultdict(dict)
 		
+<<<<<<< HEAD
 		#strand_rule={'1+':'+','1-':'-','2+':'-','2-':'+'}	
 		strand_rule={'1+':'-','1-':'+','2+':'+','2-':'-'}
 		
@@ -381,6 +385,44 @@ class ParseSAM:
 							Pwig[chrom][i] +=1
 						else:
 							Pwig[chrom][i]=1					
+=======
+		for line in self.f:
+			hits=[]
+			if line.startswith('@'):continue						#skip head lines
+			if ParseSAM._reExpr2.match(line):continue		#skip blank lines
+			field=line.rstrip().split()	
+			if (string.atoi(field[1]) & 0x0004)!=0: continue	#skip unmapped line							
+			txStart=string.atoi(field[3])
+			if (string.atoi(field[1]) & 0x0010 != 0):
+				strand='-'
+			else:
+				strand='+'
+
+			comb=[int(i) for i in ParseSAM._splicedHit_pat.findall(field[5])]	#"9M4721N63M3157N8M" return ['9', '4721', '63', '3157', '8']
+			
+			for i in range(0,len(comb),2):
+				hits.extend(range(txStart + sum(comb[:i]), txStart + sum(comb[:i]) + comb[i]))
+				
+			if strandSpecific is not True:
+				for i in hits:
+					if wig[field[2]].has_key(i):
+						wig[field[2]][i] +=1
+					else:
+						wig[field[2]][i]=1
+			else:
+				if strand == '-':
+					for i in hits:
+						if Nwig[field[2]].has_key(i):
+							Nwig[field[2]][i] += 1
+						else:
+							Nwig[field[2]][i] = 1
+				if strand == '+':
+					for i in hits:
+						if Pwig[field[2]].has_key(i):
+							Pwig[field[2]][i] +=1
+						else:
+							Pwig[field[2]][i]=1					
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 		
 		if header:FO.write(headline + "\n")
 		
@@ -2302,6 +2344,7 @@ class QCSAM:
 							
 		print >>sys.stderr, "Done"
 		
+<<<<<<< HEAD
 		print "read_type\tstrand_expected\tstrand_observed\tcount"
 		for i in sorted(strand_stat):
 				print str(i) +'\t' + str(strand_stat[i])
@@ -2531,6 +2574,13 @@ class QCSAM:
 		print "==================== report ================\n"
 		
 		
+=======
+		for i in sorted(strand_stat):
+				print str(i) +'\t' + str(strand_stat[i])
+		
+		
+
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
 def print_bits_as_bed( bits ):
     end = 0
     while 1:

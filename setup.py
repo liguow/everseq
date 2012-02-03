@@ -32,7 +32,11 @@ except:
        
 def main():
     setup(  name = "EVER-seq",
+<<<<<<< HEAD
             version = "1.0.6",
+=======
+            version = "1.0.5",
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
             py_modules = [ 'psyco_full' ],
             packages = find_packages( 'lib' ),
             package_dir = { '': 'lib' },
@@ -52,7 +56,11 @@ def main():
             	'Operating System :: POSIX',
             	'Programming Language :: Python'
             ],
+<<<<<<< HEAD
             url = "http://code.google.com/p/ever-seq/",
+=======
+            url = "NA",
+>>>>>>> 7142d30483fae4447bc4d8822a6f31cd3673182c
             zip_safe = False,
             dependency_links = [],
             cmdclass=command_classes )
