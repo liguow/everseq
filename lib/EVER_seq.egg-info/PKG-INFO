@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: EVER-seq
+Version: 1.0.6
+Summary: Evaluation and Visualization Experiment of RNA-seq
+Home-page: http://code.google.com/p/ever-seq/
+Author: Liguo Wang
+Author-email: wangliguo78@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Bioiformatics
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
